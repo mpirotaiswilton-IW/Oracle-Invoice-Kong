@@ -1,14 +1,6 @@
 _format_version: "3.0"
 services:
 - host: localhost
-  name: REST_API_for_Oracle_Fusion_Cloud_Financials
-  path: /fscmRestApi/resources/11.13.18.05
-  plugins: []
-  port: 443
-  protocol: https
-  routes: []
-  tags: []
-- host: localhost
   name: REST_API_for_Oracle_Fusion_Cloud_Financials-invoices
   path: /fscmRestApi/resources/11.13.18.05
   plugins: []
