@@ -1,0 +1,1083 @@
+_format_version: "3.0"
+services:
+- host: localhost
+  name: REST_API_for_Oracle_Fusion_Cloud_Financials
+  path: /fscmRestApi/resources/11.13.18.05
+  plugins: []
+  port: 443
+  protocol: https
+  routes: []
+  tags: []
+- host: localhost
+  name: REST_API_for_Oracle_Fusion_Cloud_Financials-invoices
+  path: /fscmRestApi/resources/11.13.18.05
+  plugins: []
+  port: 443
+  protocol: https
+  routes:
+  - methods:
+    - GET
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-getall_invoices
+    paths:
+    - ~/invoices$
+    plugins: []
+    regex_priority: 200
+    strip_path: false
+    tags: []
+  - methods:
+    - POST
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-create_invoices
+    paths:
+    - ~/invoices$
+    plugins: []
+    regex_priority: 200
+    strip_path: false
+    tags: []
+  tags: []
+- host: localhost
+  name: REST_API_for_Oracle_Fusion_Cloud_Financials-invoices_action_applyPrepayments
+  path: /fscmRestApi/resources/11.13.18.05
+  plugins: []
+  port: 443
+  protocol: https
+  routes:
+  - methods:
+    - POST
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-doall_applyPrepayments_invoices
+    paths:
+    - ~/invoices/action/applyPrepayments$
+    plugins: []
+    regex_priority: 200
+    strip_path: false
+    tags: []
+  tags: []
+- host: localhost
+  name: REST_API_for_Oracle_Fusion_Cloud_Financials-invoices_action_calculateTax
+  path: /fscmRestApi/resources/11.13.18.05
+  plugins: []
+  port: 443
+  protocol: https
+  routes:
+  - methods:
+    - POST
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-doall_calculateTax_invoices
+    paths:
+    - ~/invoices/action/calculateTax$
+    plugins: []
+    regex_priority: 200
+    strip_path: false
+    tags: []
+  tags: []
+- host: localhost
+  name: REST_API_for_Oracle_Fusion_Cloud_Financials-invoices_action_cancelInvoice
+  path: /fscmRestApi/resources/11.13.18.05
+  plugins: []
+  port: 443
+  protocol: https
+  routes:
+  - methods:
+    - POST
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-doall_cancelInvoice_invoices
+    paths:
+    - ~/invoices/action/cancelInvoice$
+    plugins: []
+    regex_priority: 200
+    strip_path: false
+    tags: []
+  tags: []
+- host: localhost
+  name: REST_API_for_Oracle_Fusion_Cloud_Financials-invoices_action_cancelLine
+  path: /fscmRestApi/resources/11.13.18.05
+  plugins: []
+  port: 443
+  protocol: https
+  routes:
+  - methods:
+    - POST
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-doall_cancelLine_invoices
+    paths:
+    - ~/invoices/action/cancelLine$
+    plugins: []
+    regex_priority: 200
+    strip_path: false
+    tags: []
+  tags: []
+- host: localhost
+  name: REST_API_for_Oracle_Fusion_Cloud_Financials-invoices_action_generateDistributions
+  path: /fscmRestApi/resources/11.13.18.05
+  plugins: []
+  port: 443
+  protocol: https
+  routes:
+  - methods:
+    - POST
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-doall_generateDistributions_invoices
+    paths:
+    - ~/invoices/action/generateDistributions$
+    plugins: []
+    regex_priority: 200
+    strip_path: false
+    tags: []
+  tags: []
+- host: localhost
+  name: REST_API_for_Oracle_Fusion_Cloud_Financials-invoices_action_reverseDistributions
+  path: /fscmRestApi/resources/11.13.18.05
+  plugins: []
+  port: 443
+  protocol: https
+  routes:
+  - methods:
+    - POST
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-doall_reverseDistributions_invoices
+    paths:
+    - ~/invoices/action/reverseDistributions$
+    plugins: []
+    regex_priority: 200
+    strip_path: false
+    tags: []
+  tags: []
+- host: localhost
+  name: REST_API_for_Oracle_Fusion_Cloud_Financials-invoices_action_unapplyPrepayments
+  path: /fscmRestApi/resources/11.13.18.05
+  plugins: []
+  port: 443
+  protocol: https
+  routes:
+  - methods:
+    - POST
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-doall_unapplyPrepayments_invoices
+    paths:
+    - ~/invoices/action/unapplyPrepayments$
+    plugins: []
+    regex_priority: 200
+    strip_path: false
+    tags: []
+  tags: []
+- host: localhost
+  name: REST_API_for_Oracle_Fusion_Cloud_Financials-invoices_action_validateInvoice
+  path: /fscmRestApi/resources/11.13.18.05
+  plugins: []
+  port: 443
+  protocol: https
+  routes:
+  - methods:
+    - POST
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-doall_validateInvoice_invoices
+    paths:
+    - ~/invoices/action/validateInvoice$
+    plugins: []
+    regex_priority: 200
+    strip_path: false
+    tags: []
+  tags: []
+- host: localhost
+  name: REST_API_for_Oracle_Fusion_Cloud_Financials-invoices_invoicesUniqID
+  path: /fscmRestApi/resources/11.13.18.05
+  plugins: []
+  port: 443
+  protocol: https
+  routes:
+  - methods:
+    - DELETE
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-delete_invoices
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  - methods:
+    - GET
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-get_invoices
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  - methods:
+    - PATCH
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-update_invoices
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  tags: []
+- host: localhost
+  name: REST_API_for_Oracle_Fusion_Cloud_Financials-invoices_invoicesUniqID_child_appliedPrepayments
+  path: /fscmRestApi/resources/11.13.18.05
+  plugins: []
+  port: 443
+  protocol: https
+  routes:
+  - methods:
+    - GET
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-getall_invoices-appliedPrepayments
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/appliedPrepayments$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  tags: []
+- host: localhost
+  name: REST_API_for_Oracle_Fusion_Cloud_Financials-invoices_invoicesUniqID_child_appliedPrepayments_appliedPrepaymentsUniqID
+  path: /fscmRestApi/resources/11.13.18.05
+  plugins: []
+  port: 443
+  protocol: https
+  routes:
+  - methods:
+    - GET
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-get_invoices-appliedPrepayments
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/appliedPrepayments/(?<appliedPrepaymentsUniqID>[^#?/]+)$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  tags: []
+- host: localhost
+  name: REST_API_for_Oracle_Fusion_Cloud_Financials-invoices_invoicesUniqID_child_attachments
+  path: /fscmRestApi/resources/11.13.18.05
+  plugins: []
+  port: 443
+  protocol: https
+  routes:
+  - methods:
+    - GET
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-getall_invoices-attachments
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/attachments$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  - methods:
+    - POST
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-create_invoices-attachments
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/attachments$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  tags: []
+- host: localhost
+  name: REST_API_for_Oracle_Fusion_Cloud_Financials-invoices_invoicesUniqID_child_attachments_attachmentsUniqID
+  path: /fscmRestApi/resources/11.13.18.05
+  plugins: []
+  port: 443
+  protocol: https
+  routes:
+  - methods:
+    - DELETE
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-delete_invoices-attachments
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/attachments/(?<attachmentsUniqID>[^#?/]+)$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  - methods:
+    - GET
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-get_invoices-attachments
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/attachments/(?<attachmentsUniqID>[^#?/]+)$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  tags: []
+- host: localhost
+  name: REST_API_for_Oracle_Fusion_Cloud_Financials-invoices_invoicesUniqID_child_attachments_attachmentsUniqID_enclosure_FileContents
+  path: /fscmRestApi/resources/11.13.18.05
+  plugins: []
+  port: 443
+  protocol: https
+  routes:
+  - methods:
+    - DELETE
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-delete_invoices-attachments-FileContents
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/attachments/(?<attachmentsUniqID>[^#?/]+)/enclosure/FileContents$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  - methods:
+    - GET
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-get_invoices-attachments-FileContents
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/attachments/(?<attachmentsUniqID>[^#?/]+)/enclosure/FileContents$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  - methods:
+    - PUT
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-replace_invoices-attachments-FileContents
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/attachments/(?<attachmentsUniqID>[^#?/]+)/enclosure/FileContents$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  tags: []
+- host: localhost
+  name: REST_API_for_Oracle_Fusion_Cloud_Financials-invoices_invoicesUniqID_child_attachments_attachmentsUniqID_enclosure_FileWebImage
+  path: /fscmRestApi/resources/11.13.18.05
+  plugins: []
+  port: 443
+  protocol: https
+  routes:
+  - methods:
+    - GET
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-get_invoices-attachments-FileWebImage
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/attachments/(?<attachmentsUniqID>[^#?/]+)/enclosure/FileWebImage$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  tags: []
+- host: localhost
+  name: REST_API_for_Oracle_Fusion_Cloud_Financials-invoices_invoicesUniqID_child_availablePrepayments
+  path: /fscmRestApi/resources/11.13.18.05
+  plugins: []
+  port: 443
+  protocol: https
+  routes:
+  - methods:
+    - GET
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-getall_invoices-availablePrepayments
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/availablePrepayments$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  tags: []
+- host: localhost
+  name: REST_API_for_Oracle_Fusion_Cloud_Financials-invoices_invoicesUniqID_child_availablePrepayments_availablePrepaymentsUniqID
+  path: /fscmRestApi/resources/11.13.18.05
+  plugins: []
+  port: 443
+  protocol: https
+  routes:
+  - methods:
+    - GET
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-get_invoices-availablePrepayments
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/availablePrepayments/(?<availablePrepaymentsUniqID>[^#?/]+)$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  tags: []
+- host: localhost
+  name: REST_API_for_Oracle_Fusion_Cloud_Financials-invoices_invoicesUniqID_child_invoiceDff
+  path: /fscmRestApi/resources/11.13.18.05
+  plugins: []
+  port: 443
+  protocol: https
+  routes:
+  - methods:
+    - GET
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-getall_invoices-invoiceDff
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceDff$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  - methods:
+    - POST
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-create_invoices-invoiceDff
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceDff$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  tags: []
+- host: localhost
+  name: REST_API_for_Oracle_Fusion_Cloud_Financials-invoices_invoicesUniqID_child_invoiceDff_InvoiceId
+  path: /fscmRestApi/resources/11.13.18.05
+  plugins: []
+  port: 443
+  protocol: https
+  routes:
+  - methods:
+    - GET
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-get_invoices-invoiceDff
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceDff/(?<InvoiceId>[^#?/]+)$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  - methods:
+    - PATCH
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-update_invoices-invoiceDff
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceDff/(?<InvoiceId>[^#?/]+)$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  tags: []
+- host: localhost
+  name: REST_API_for_Oracle_Fusion_Cloud_Financials-invoices_invoicesUniqID_child_invoiceGdf
+  path: /fscmRestApi/resources/11.13.18.05
+  plugins: []
+  port: 443
+  protocol: https
+  routes:
+  - methods:
+    - GET
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-getall_invoices-invoiceGdf
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceGdf$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  - methods:
+    - POST
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-create_invoices-invoiceGdf
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceGdf$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  tags: []
+- host: localhost
+  name: REST_API_for_Oracle_Fusion_Cloud_Financials-invoices_invoicesUniqID_child_invoiceGdf_InvoiceId
+  path: /fscmRestApi/resources/11.13.18.05
+  plugins: []
+  port: 443
+  protocol: https
+  routes:
+  - methods:
+    - GET
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-get_invoices-invoiceGdf
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceGdf/(?<InvoiceId>[^#?/]+)$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  - methods:
+    - PATCH
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-update_invoices-invoiceGdf
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceGdf/(?<InvoiceId>[^#?/]+)$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  tags: []
+- host: localhost
+  name: REST_API_for_Oracle_Fusion_Cloud_Financials-invoices_invoicesUniqID_child_invoiceInstallments
+  path: /fscmRestApi/resources/11.13.18.05
+  plugins: []
+  port: 443
+  protocol: https
+  routes:
+  - methods:
+    - GET
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-getall_invoices-invoiceInstallments
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceInstallments$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  - methods:
+    - POST
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-create_invoices-invoiceInstallments
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceInstallments$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  tags: []
+- host: localhost
+  name: REST_API_for_Oracle_Fusion_Cloud_Financials-invoices_invoicesUniqID_child_invoiceInstallments_invoiceInstallmentsUniqID
+  path: /fscmRestApi/resources/11.13.18.05
+  plugins: []
+  port: 443
+  protocol: https
+  routes:
+  - methods:
+    - DELETE
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-delete_invoices-invoiceInstallments
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceInstallments/(?<invoiceInstallmentsUniqID>[^#?/]+)$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  - methods:
+    - GET
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-get_invoices-invoiceInstallments
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceInstallments/(?<invoiceInstallmentsUniqID>[^#?/]+)$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  - methods:
+    - PATCH
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-update_invoices-invoiceInstallments
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceInstallments/(?<invoiceInstallmentsUniqID>[^#?/]+)$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  tags: []
+- host: localhost
+  name: REST_API_for_Oracle_Fusion_Cloud_Financials-invoices_invoicesUniqID_child_invoiceInstallments_invoiceInstallmentsUniqID_child_invoiceInstallmentDff
+  path: /fscmRestApi/resources/11.13.18.05
+  plugins: []
+  port: 443
+  protocol: https
+  routes:
+  - methods:
+    - GET
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-getall_invoices-invoiceInstallments-invoiceInstallmentDff
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceInstallments/(?<invoiceInstallmentsUniqID>[^#?/]+)/child/invoiceInstallmentDff$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  - methods:
+    - POST
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-create_invoices-invoiceInstallments-invoiceInstallmentDff
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceInstallments/(?<invoiceInstallmentsUniqID>[^#?/]+)/child/invoiceInstallmentDff$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  tags: []
+- host: localhost
+  name: REST_API_for_Oracle_Fusion_Cloud_Financials-invoices_invoicesUniqID_child_invoiceInstallments_invoiceInstallmentsUniqID_child_invoiceInstallmentDff_invoiceInstallmentDffUniqID
+  path: /fscmRestApi/resources/11.13.18.05
+  plugins: []
+  port: 443
+  protocol: https
+  routes:
+  - methods:
+    - GET
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-get_invoices-invoiceInstallments-invoiceInstallmentDff
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceInstallments/(?<invoiceInstallmentsUniqID>[^#?/]+)/child/invoiceInstallmentDff/(?<invoiceInstallmentDffUniqID>[^#?/]+)$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  - methods:
+    - PATCH
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-update_invoices-invoiceInstallments-invoiceInstallmentDff
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceInstallments/(?<invoiceInstallmentsUniqID>[^#?/]+)/child/invoiceInstallmentDff/(?<invoiceInstallmentDffUniqID>[^#?/]+)$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  tags: []
+- host: localhost
+  name: REST_API_for_Oracle_Fusion_Cloud_Financials-invoices_invoicesUniqID_child_invoiceInstallments_invoiceInstallmentsUniqID_child_invoiceInstallmentGdf
+  path: /fscmRestApi/resources/11.13.18.05
+  plugins: []
+  port: 443
+  protocol: https
+  routes:
+  - methods:
+    - GET
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-getall_invoices-invoiceInstallments-invoiceInstallmentGdf
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceInstallments/(?<invoiceInstallmentsUniqID>[^#?/]+)/child/invoiceInstallmentGdf$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  - methods:
+    - POST
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-create_invoices-invoiceInstallments-invoiceInstallmentGdf
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceInstallments/(?<invoiceInstallmentsUniqID>[^#?/]+)/child/invoiceInstallmentGdf$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  tags: []
+- host: localhost
+  name: REST_API_for_Oracle_Fusion_Cloud_Financials-invoices_invoicesUniqID_child_invoiceInstallments_invoiceInstallmentsUniqID_child_invoiceInstallmentGdf_invoiceInstallmentGdfUniqID
+  path: /fscmRestApi/resources/11.13.18.05
+  plugins: []
+  port: 443
+  protocol: https
+  routes:
+  - methods:
+    - GET
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-get_invoices-invoiceInstallments-invoiceInstallmentGdf
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceInstallments/(?<invoiceInstallmentsUniqID>[^#?/]+)/child/invoiceInstallmentGdf/(?<invoiceInstallmentGdfUniqID>[^#?/]+)$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  - methods:
+    - PATCH
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-update_invoices-invoiceInstallments-invoiceInstallmentGdf
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceInstallments/(?<invoiceInstallmentsUniqID>[^#?/]+)/child/invoiceInstallmentGdf/(?<invoiceInstallmentGdfUniqID>[^#?/]+)$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  tags: []
+- host: localhost
+  name: REST_API_for_Oracle_Fusion_Cloud_Financials-invoices_invoicesUniqID_child_invoiceLines
+  path: /fscmRestApi/resources/11.13.18.05
+  plugins: []
+  port: 443
+  protocol: https
+  routes:
+  - methods:
+    - GET
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-getall_invoices-invoiceLines
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceLines$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  - methods:
+    - POST
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-create_invoices-invoiceLines
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceLines$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  tags: []
+- host: localhost
+  name: REST_API_for_Oracle_Fusion_Cloud_Financials-invoices_invoicesUniqID_child_invoiceLines_invoiceLinesUniqID
+  path: /fscmRestApi/resources/11.13.18.05
+  plugins: []
+  port: 443
+  protocol: https
+  routes:
+  - methods:
+    - DELETE
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-delete_invoices-invoiceLines
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceLines/(?<invoiceLinesUniqID>[^#?/]+)$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  - methods:
+    - GET
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-get_invoices-invoiceLines
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceLines/(?<invoiceLinesUniqID>[^#?/]+)$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  - methods:
+    - PATCH
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-update_invoices-invoiceLines
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceLines/(?<invoiceLinesUniqID>[^#?/]+)$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  tags: []
+- host: localhost
+  name: REST_API_for_Oracle_Fusion_Cloud_Financials-invoices_invoicesUniqID_child_invoiceLines_invoiceLinesUniqID_child_invoiceDistributions
+  path: /fscmRestApi/resources/11.13.18.05
+  plugins: []
+  port: 443
+  protocol: https
+  routes:
+  - methods:
+    - GET
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-getall_invoices-invoiceLines-invoiceDistributions
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceLines/(?<invoiceLinesUniqID>[^#?/]+)/child/invoiceDistributions$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  - methods:
+    - POST
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-create_invoices-invoiceLines-invoiceDistributions
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceLines/(?<invoiceLinesUniqID>[^#?/]+)/child/invoiceDistributions$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  tags: []
+- host: localhost
+  name: REST_API_for_Oracle_Fusion_Cloud_Financials-invoices_invoicesUniqID_child_invoiceLines_invoiceLinesUniqID_child_invoiceDistributions_InvoiceDistributionId
+  path: /fscmRestApi/resources/11.13.18.05
+  plugins: []
+  port: 443
+  protocol: https
+  routes:
+  - methods:
+    - DELETE
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-delete_invoices-invoiceLines-invoiceDistributions
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceLines/(?<invoiceLinesUniqID>[^#?/]+)/child/invoiceDistributions/(?<InvoiceDistributionId>[^#?/]+)$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  - methods:
+    - GET
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-get_invoices-invoiceLines-invoiceDistributions
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceLines/(?<invoiceLinesUniqID>[^#?/]+)/child/invoiceDistributions/(?<InvoiceDistributionId>[^#?/]+)$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  - methods:
+    - PATCH
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-update_invoices-invoiceLines-invoiceDistributions
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceLines/(?<invoiceLinesUniqID>[^#?/]+)/child/invoiceDistributions/(?<InvoiceDistributionId>[^#?/]+)$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  tags: []
+- host: localhost
+  name: REST_API_for_Oracle_Fusion_Cloud_Financials-invoices_invoicesUniqID_child_invoiceLines_invoiceLinesUniqID_child_invoiceDistributions_InvoiceDistributionId_child_invoiceDistributionDff
+  path: /fscmRestApi/resources/11.13.18.05
+  plugins: []
+  port: 443
+  protocol: https
+  routes:
+  - methods:
+    - GET
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-getall_invoices-invoiceLines-invoiceDistributions-invoiceDistributionDff
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceLines/(?<invoiceLinesUniqID>[^#?/]+)/child/invoiceDistributions/(?<InvoiceDistributionId>[^#?/]+)/child/invoiceDistributionDff$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  - methods:
+    - POST
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-create_invoices-invoiceLines-invoiceDistributions-invoiceDistributionDff
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceLines/(?<invoiceLinesUniqID>[^#?/]+)/child/invoiceDistributions/(?<InvoiceDistributionId>[^#?/]+)/child/invoiceDistributionDff$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  tags: []
+- host: localhost
+  name: REST_API_for_Oracle_Fusion_Cloud_Financials-invoices_invoicesUniqID_child_invoiceLines_invoiceLinesUniqID_child_invoiceDistributions_InvoiceDistributionId_child_invoiceDistributionDff_InvoiceDistributionId2
+  path: /fscmRestApi/resources/11.13.18.05
+  plugins: []
+  port: 443
+  protocol: https
+  routes:
+  - methods:
+    - GET
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-get_invoices-invoiceLines-invoiceDistributions-invoiceDistributionDff
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceLines/(?<invoiceLinesUniqID>[^#?/]+)/child/invoiceDistributions/(?<InvoiceDistributionId>[^#?/]+)/child/invoiceDistributionDff/(?<InvoiceDistributionId2>[^#?/]+)$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  - methods:
+    - PATCH
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-update_invoices-invoiceLines-invoiceDistributions-invoiceDistributionDff
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceLines/(?<invoiceLinesUniqID>[^#?/]+)/child/invoiceDistributions/(?<InvoiceDistributionId>[^#?/]+)/child/invoiceDistributionDff/(?<InvoiceDistributionId2>[^#?/]+)$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  tags: []
+- host: localhost
+  name: REST_API_for_Oracle_Fusion_Cloud_Financials-invoices_invoicesUniqID_child_invoiceLines_invoiceLinesUniqID_child_invoiceDistributions_InvoiceDistributionId_child_invoiceDistributionGdf
+  path: /fscmRestApi/resources/11.13.18.05
+  plugins: []
+  port: 443
+  protocol: https
+  routes:
+  - methods:
+    - GET
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-getall_invoices-invoiceLines-invoiceDistributions-invoiceDistributionGdf
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceLines/(?<invoiceLinesUniqID>[^#?/]+)/child/invoiceDistributions/(?<InvoiceDistributionId>[^#?/]+)/child/invoiceDistributionGdf$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  - methods:
+    - POST
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-create_invoices-invoiceLines-invoiceDistributions-invoiceDistributionGdf
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceLines/(?<invoiceLinesUniqID>[^#?/]+)/child/invoiceDistributions/(?<InvoiceDistributionId>[^#?/]+)/child/invoiceDistributionGdf$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  tags: []
+- host: localhost
+  name: REST_API_for_Oracle_Fusion_Cloud_Financials-invoices_invoicesUniqID_child_invoiceLines_invoiceLinesUniqID_child_invoiceDistributions_InvoiceDistributionId_child_invoiceDistributionGdf_InvoiceDistributionId3
+  path: /fscmRestApi/resources/11.13.18.05
+  plugins: []
+  port: 443
+  protocol: https
+  routes:
+  - methods:
+    - GET
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-get_invoices-invoiceLines-invoiceDistributions-invoiceDistributionGdf
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceLines/(?<invoiceLinesUniqID>[^#?/]+)/child/invoiceDistributions/(?<InvoiceDistributionId>[^#?/]+)/child/invoiceDistributionGdf/(?<InvoiceDistributionId3>[^#?/]+)$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  - methods:
+    - PATCH
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-update_invoices-invoiceLines-invoiceDistributions-invoiceDistributionGdf
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceLines/(?<invoiceLinesUniqID>[^#?/]+)/child/invoiceDistributions/(?<InvoiceDistributionId>[^#?/]+)/child/invoiceDistributionGdf/(?<InvoiceDistributionId3>[^#?/]+)$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  tags: []
+- host: localhost
+  name: REST_API_for_Oracle_Fusion_Cloud_Financials-invoices_invoicesUniqID_child_invoiceLines_invoiceLinesUniqID_child_invoiceDistributions_InvoiceDistributionId_child_invoiceDistributionProjectDff
+  path: /fscmRestApi/resources/11.13.18.05
+  plugins: []
+  port: 443
+  protocol: https
+  routes:
+  - methods:
+    - GET
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-getall_invoices-invoiceLines-invoiceDistributions-invoiceDistributionProjectDff
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceLines/(?<invoiceLinesUniqID>[^#?/]+)/child/invoiceDistributions/(?<InvoiceDistributionId>[^#?/]+)/child/invoiceDistributionProjectDff$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  - methods:
+    - POST
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-create_invoices-invoiceLines-invoiceDistributions-invoiceDistributionProjectDff
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceLines/(?<invoiceLinesUniqID>[^#?/]+)/child/invoiceDistributions/(?<InvoiceDistributionId>[^#?/]+)/child/invoiceDistributionProjectDff$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  tags: []
+- host: localhost
+  name: REST_API_for_Oracle_Fusion_Cloud_Financials-invoices_invoicesUniqID_child_invoiceLines_invoiceLinesUniqID_child_invoiceDistributions_InvoiceDistributionId_child_invoiceDistributionProjectDff_InvoiceDistributionId4
+  path: /fscmRestApi/resources/11.13.18.05
+  plugins: []
+  port: 443
+  protocol: https
+  routes:
+  - methods:
+    - GET
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-get_invoices-invoiceLines-invoiceDistributions-invoiceDistributionProjectDff
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceLines/(?<invoiceLinesUniqID>[^#?/]+)/child/invoiceDistributions/(?<InvoiceDistributionId>[^#?/]+)/child/invoiceDistributionProjectDff/(?<InvoiceDistributionId4>[^#?/]+)$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  - methods:
+    - PATCH
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-update_invoices-invoiceLines-invoiceDistributions-invoiceDistributionProjectDff
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceLines/(?<invoiceLinesUniqID>[^#?/]+)/child/invoiceDistributions/(?<InvoiceDistributionId>[^#?/]+)/child/invoiceDistributionProjectDff/(?<InvoiceDistributionId4>[^#?/]+)$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  tags: []
+- host: localhost
+  name: REST_API_for_Oracle_Fusion_Cloud_Financials-invoices_invoicesUniqID_child_invoiceLines_invoiceLinesUniqID_child_invoiceLineDff
+  path: /fscmRestApi/resources/11.13.18.05
+  plugins: []
+  port: 443
+  protocol: https
+  routes:
+  - methods:
+    - GET
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-getall_invoices-invoiceLines-invoiceLineDff
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceLines/(?<invoiceLinesUniqID>[^#?/]+)/child/invoiceLineDff$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  - methods:
+    - POST
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-create_invoices-invoiceLines-invoiceLineDff
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceLines/(?<invoiceLinesUniqID>[^#?/]+)/child/invoiceLineDff$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  tags: []
+- host: localhost
+  name: REST_API_for_Oracle_Fusion_Cloud_Financials-invoices_invoicesUniqID_child_invoiceLines_invoiceLinesUniqID_child_invoiceLineDff_invoiceLineDffUniqID
+  path: /fscmRestApi/resources/11.13.18.05
+  plugins: []
+  port: 443
+  protocol: https
+  routes:
+  - methods:
+    - GET
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-get_invoices-invoiceLines-invoiceLineDff
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceLines/(?<invoiceLinesUniqID>[^#?/]+)/child/invoiceLineDff/(?<invoiceLineDffUniqID>[^#?/]+)$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  - methods:
+    - PATCH
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-update_invoices-invoiceLines-invoiceLineDff
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceLines/(?<invoiceLinesUniqID>[^#?/]+)/child/invoiceLineDff/(?<invoiceLineDffUniqID>[^#?/]+)$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  tags: []
+- host: localhost
+  name: REST_API_for_Oracle_Fusion_Cloud_Financials-invoices_invoicesUniqID_child_invoiceLines_invoiceLinesUniqID_child_invoiceLineGdf
+  path: /fscmRestApi/resources/11.13.18.05
+  plugins: []
+  port: 443
+  protocol: https
+  routes:
+  - methods:
+    - GET
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-getall_invoices-invoiceLines-invoiceLineGdf
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceLines/(?<invoiceLinesUniqID>[^#?/]+)/child/invoiceLineGdf$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  - methods:
+    - POST
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-create_invoices-invoiceLines-invoiceLineGdf
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceLines/(?<invoiceLinesUniqID>[^#?/]+)/child/invoiceLineGdf$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  tags: []
+- host: localhost
+  name: REST_API_for_Oracle_Fusion_Cloud_Financials-invoices_invoicesUniqID_child_invoiceLines_invoiceLinesUniqID_child_invoiceLineGdf_invoiceLineGdfUniqID
+  path: /fscmRestApi/resources/11.13.18.05
+  plugins: []
+  port: 443
+  protocol: https
+  routes:
+  - methods:
+    - GET
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-get_invoices-invoiceLines-invoiceLineGdf
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceLines/(?<invoiceLinesUniqID>[^#?/]+)/child/invoiceLineGdf/(?<invoiceLineGdfUniqID>[^#?/]+)$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  - methods:
+    - PATCH
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-update_invoices-invoiceLines-invoiceLineGdf
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceLines/(?<invoiceLinesUniqID>[^#?/]+)/child/invoiceLineGdf/(?<invoiceLineGdfUniqID>[^#?/]+)$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  tags: []
+- host: localhost
+  name: REST_API_for_Oracle_Fusion_Cloud_Financials-invoices_invoicesUniqID_child_invoiceLines_invoiceLinesUniqID_child_invoiceLineProjectDff
+  path: /fscmRestApi/resources/11.13.18.05
+  plugins: []
+  port: 443
+  protocol: https
+  routes:
+  - methods:
+    - GET
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-getall_invoices-invoiceLines-invoiceLineProjectDff
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceLines/(?<invoiceLinesUniqID>[^#?/]+)/child/invoiceLineProjectDff$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  - methods:
+    - POST
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-create_invoices-invoiceLines-invoiceLineProjectDff
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceLines/(?<invoiceLinesUniqID>[^#?/]+)/child/invoiceLineProjectDff$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  tags: []
+- host: localhost
+  name: REST_API_for_Oracle_Fusion_Cloud_Financials-invoices_invoicesUniqID_child_invoiceLines_invoiceLinesUniqID_child_invoiceLineProjectDff_invoiceLineProjectDffUniqID
+  path: /fscmRestApi/resources/11.13.18.05
+  plugins: []
+  port: 443
+  protocol: https
+  routes:
+  - methods:
+    - GET
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-get_invoices-invoiceLines-invoiceLineProjectDff
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceLines/(?<invoiceLinesUniqID>[^#?/]+)/child/invoiceLineProjectDff/(?<invoiceLineProjectDffUniqID>[^#?/]+)$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  - methods:
+    - PATCH
+    name: REST_API_for_Oracle_Fusion_Cloud_Financials-update_invoices-invoiceLines-invoiceLineProjectDff
+    paths:
+    - ~/invoices/(?<invoicesUniqID>[^#?/]+)/child/invoiceLines/(?<invoiceLinesUniqID>[^#?/]+)/child/invoiceLineProjectDff/(?<invoiceLineProjectDffUniqID>[^#?/]+)$
+    plugins: []
+    regex_priority: 100
+    strip_path: false
+    tags: []
+  tags: []
+upstreams: []
